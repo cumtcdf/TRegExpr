@@ -3012,8 +3012,8 @@ begin
     begin
       dec(regparse);
       if ((fCompModifiers and MaskModX) <> 0) and // check for eXtended syntax
-        ((regparse^ = '#') or ({$IFDEF UniCode}FStrScan(XIgnoredChars,
-        regparse^) <> nil // ###0.947
+        ((regparse^ = '#') or ({$IFDEF UniCode}FStrScan(XIgnoredChars, regparse^)
+        <> nil // ###0.947
 {$ELSE}regparse^ in XIgnoredChars{$ENDIF})) then
       begin // ###0.941 \x
         if regparse^ = '#' then
